@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Student Information </title>
+		<script type = "text/javascript">
+			function validate()
+			{
+				if(document.std.name.value == "")
+				{
+					alert("Please enter your name! ");
+					document.std.name.focus();
+					return false;
+				}
+				if(document.std.usn.value == "")
+				{
+					alert("Please enter your USN!");
+					document.std.usn.focus();
+					return false;
+				}
+				if(document.std.usn.value != "")
+				{
+                    var str = document.std.usn.value
+                    if (str.match(/[1][M][S]\d{2}[A-Z]{2}\d{3}/) == null)
+                        {
+                            alert("Please enter a valid USN!");
+                            return false;
+                        }
+				}
+				if(document.std.dob.value = "")
+				{
+					alert("Please enter your Date of Birth!");
+					document.std.dob.focus();
+					return false;
+				}
+				if(document.std.cgpa.value == "")
+				{
+					alert("Please enter your CGPA!");
+					document.std.cgpa.focus();
+					return false;
+				}
+				if(document.std.cgpa.value >10 || document.std.cgpa.value < 0)
+				{
+					alert("Invalid CGPA . Accepted range 0 - 10");
+					document.std.cgpa.focus();
+					return false;
+				}
+				if(document.std.email.value == "")
+				{
+					alert("Please enter your Email!");
+					document.std.email.focus();
+					return false;
+				}
+
+			}
+        
+		</script>
+	</head>
+	<body>
+		<h1><center>Student Information</center></h1>
+		<br><br><br>
+		<form name="std" onsubmit="return(validate());">
+			Name 			: 	<input type = "text" name = "name"><br>
+			USN				:	<input type = "text" name = "usn"><br>
+			Deptartment		:	<input type = "text" name = "dept"><br>
+			Date of Birth	:	<input type = "date" name = "dob"><br>
+			CGPA			:	<input type = "number" name = "cgpa"><br>
+			email			: 	<input type = "email" name = "email"> <br><br><br>
+
+			<input type = submit>
+		</form>
+	</body>
+</html>

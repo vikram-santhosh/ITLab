@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            
+            function display(str)
+            {
+                ans = "Your favourite college is " + str ;
+                alert(ans);
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Choose your favorite college (not that you can do anything about it now) </h1>
+        <input type = "radio" id = "msrit" value = "msrit" onClick="display('msrit');">
+             <label for="msrit">MSRIT</label><br>
+        <input type = "radio" id = "rvce" value = "rvce" onClick="display('rvce');" >
+             <label for="rvce">RVCE</label><br>
+        <input type = "radio" id = "bmsce" value = "bmsce" onClick="display('bmsce');">
+             <label for="bmsce">BMSCE</label><br>
+        <input type = "radio" id = "pesit" value = "pesit" onClick="display('pesit');">
+             <label for="pesit">PESIT</label><br>
+    </body>
+</html>

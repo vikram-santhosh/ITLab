@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            
+            var objetive;
+            var num_class;
+            var tb;
+            var credit;
+            
+            function setIndex(val)
+            {
+                switch(val)
+                    {
+                        case 1: objective   = "bla bla";
+                                num_class   = "52";
+                                tb          = "Mr.Meow";
+                                credit      = "4";
+                                display();
+                                break;
+                            
+                        case 2: objective   = "bla bla";
+                                num_class   = 30;
+                                tb          = "Mr.Meow";
+                                credit      = "4";
+                                display();
+                                break;
+                        case 3: objective   = "bla bla";
+                                num_class   = "52";
+                                tb          = "Mr.Meow";
+                                credit      = "4";
+                                display();
+                                break;
+                            
+                        case 4: objective   = "bla bla";
+                                num_class   = 30;
+                                tb          = "Mr.Meow";
+                                credit      = "4";
+                                display();
+                                break;
+                        case 5: objective   = "bla bla";
+                                num_class   = "52";
+                                tb          = "Mr.Meow";
+                                credit      = "4";
+                                display();
+                                break;
+                            
+                        case 6: objective   = "bla bla";
+                                num_class   = 30;
+                                tb          = "Mr.Meow";
+                                credit      = "4";
+                                display();
+                                break;
+                            
+                    }
+            }
+            function display()
+            {
+                document.getElementById("objective").innerHTML = "Objective : " + objective ;
+                document.getElementById("credit").innerHTML = "Credits : "+ credit;
+                document.getElementById("num_class").innerHTML = "Number of Class :"+ num_class;
+                document.getElementById("tb").innerHTML = "TextBook :" + tb;
+            }
+        </script>
+    </head>
+    
+    <body>
+        <h1>Subject List</h1><br><br>
+        <ul>
+        <li>V Semester</li>
+            <ol>
+                <li id="java" onclick="setIndex(1)">Java</li>
+                <li id="dbms" onclick="setIndex(2)">Database Systems</li>
+                <li id="cn" onclick="setIndex(3)">Compter Networks</li>
+            </ol>
+        <li>VI Semester</li>
+            <ol>
+                <li id="cg" onclick="setIndex(4)">Computer Graphics</li>
+                <li id="cs" onclick="setIndex(5)">Computer Security</li>
+                <li id="cd" onclick="setIndex(6)">Compiler Design</li>
+            </ol>
+        </ul>
+        <p id="objective"></p>
+        <p id="credit"></p>
+        <p id="num_class"></p>
+        <p id="tb"></p>
+    </body>
+</html>

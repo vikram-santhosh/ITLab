@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script type = "text/javascript">
+            function freq()
+            {
+                var str = document.getElementById("str").value;
+                var dict = new Array();
+                for(var i=0;i<str.length;i++)
+                {
+                    console.log(str[i])
+                    if(typeof dict[str[i]] === 'undefined')
+                    {
+                        dict[str[i]] = 1;
+                        console.log(dict[str[i]]);
+                    }
+                    else
+                        dict[str[i]] ++;
+                }        
+                for(var key in dict)
+                {
+                    //console.log(key + " : " + dict[key]);
+                    document.write(key + " ----->" + dict[key]+"<br>");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Character Frequency </h1>
+        <br><br>
+        <p>Enter a String</p><br>
+        <input type="text" id="str"><br><br>
+        <input type="submit" onclick="freq()"><br><br>
+        
+        <div id="ans"></div>
+    </body>
+</html>

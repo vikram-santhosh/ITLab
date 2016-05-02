@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script type="text/javascript">
+            function draw() 
+            {
+                var c = document.getElementById("car");
+                var ctx = c.getContext("2d");
+                
+                ctx.beginPath();
+                ctx.moveTo(30,75);
+                ctx.lineTo(50,55);
+                ctx.lineTo(100,55);
+                ctx.lineTo(120,75);
+                ctx.lineTo(30,75);
+                ctx.stroke();
+                
+                ctx.beginPath();
+                ctx.arc(35,85,10,0,2*Math.PI);
+                ctx.stroke();
+                
+                ctx.beginPath();
+                ctx.arc(115,85,10,0,2*Math.PI);
+                ctx.stroke();
+    
+            }
+        </script>
+    </head>
+    <body onload="draw()">
+        <canvas id="car"></canvas>
+    </body>
+   
+</html>
